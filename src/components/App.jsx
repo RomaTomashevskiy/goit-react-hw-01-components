@@ -1,17 +1,15 @@
 // ======= Profile ======== //
-import user from './ProfileSocialNetwork/user.json';
+import user from 'data/user.json'
 import { Profile } from './ProfileSocialNetwork';
-// ======= Statistics ======== //
-import data from './StatisticsSection/data.json';
+// // ======= Statistics ======== //
+import data from 'data/data.json';
 import { Statistics } from './StatisticsSection/Statistics';
-// ======= Friends ======== //
-import friends from './Friends/friends.json';
+// // ======= Friends ======== //
+import friends from 'data/friends.json';
 import { FriendList } from './Friends/FriendList';
-// ======= TransactionHistory ======== //
-import transactions from './TransactionHistory/transactions.json';
+// // ======= TransactionHistory ======== //
+import transactions from 'data/transactions.json';
 import {TransactionHistory} from './TransactionHistory/TransactionHistory'
-
-
 
 
 export const App = () => {
@@ -34,10 +32,9 @@ export const App = () => {
       avatar={user.avatar}
       stats={user.stats}
       />
-      
-      <Statistics title="Upload stats" stats={data} />
+        <Statistics title="Upload stats" stats={data} />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />
+          <TransactionHistory items={transactions} />
     </div>
   );
 };
